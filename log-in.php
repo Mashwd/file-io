@@ -75,31 +75,33 @@
 		<h2 style="text-align:center; font-size: 30px;font-family:optima;">Please log-in!</h2> 
 
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" autocomplete = 'off'>
-			<fieldset style = "background: lightgreen;">
+			<fieldset style = "background: lightslategray;">
 
-				<div>
-					<label for="username" style=" width: 40%; float: left;">Username <span style="color: red;">*</span>: </label>
-					<input type="text" name="username" id="username" style = "width: 50%; float: right;">
-					<span style="color: red;"><?php echo $userNameErr; ?></span>
-				</div>
-
-				<br><br>
-
-				<div style="width: 100%; display: inline-block ;">
-					 <label for="password" style="width: 40%; float: left;">Pasword <span style="color: red;">*</span>: </label>
-					<input type="password" name="password" id="password" style = "width: 50%; float: right;">
-					<span style="color: red;"><?php echo $passwordErr; ?></span>
-				</div>
+				
+				<label for="username" style="float: left;">Username <span style="color: red;">*</span>: </label>
+				<span style="color: red; float: right;"><?php echo $userNameErr; ?></span>
+				<input type="text" name="username" id="username" style = "float: right;" value="<?php echo $userName; ?>">
+				
+				
 
 				<br><br>
 
-				<input type="submit" name="submit" value="log in" style="background: ghostwhite; font-family: Times roman; ">
+				
+				 <label for="password" style="float: left;">Pasword <span style="color: red;">*</span>: </label>
+				 <span style="color: red;float: right;"><?php echo $passwordErr; ?></span>
+				<input type="password" name="password" id="password" style = "float: right;">
+				
+				
+
+				<br><br>
+
+				<input type="submit" name="submit" value="log in" style="background: ghostwhite; font-family: Times roman;  float: right;">
 
 			</fieldset>
 		</form>
 
 		<!--<span style="color: green;"><?php /*echo $successfulMessage;*/ ?></span> -->
-		<span style="color: red;"><?php echo $errorMessage; ?></span>
+		<span style="color: red; text-align: center;"><?php echo $errorMessage; ?></span>
 
 	</div>
 
